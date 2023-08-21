@@ -9,13 +9,13 @@ const getApi = () => {
 		async function getData(){
 			try{
 			const response = await axios.get("https://fakestoreapi.com/products",)
-			 if (response.status >= 400)
-			 {
-			 	throw new Error('Server Error')
-			 }
+			if (response.status >= 400)
+			{
+				throw new Error('Server Error')
+			}
 
 
-			 setData(response.data)
+			setData(response.data)
 
 		} catch(error)
 		{
