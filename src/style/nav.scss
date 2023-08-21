@@ -1,0 +1,139 @@
+@import "../index";
+
+.nav-class{
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+	align-items: center;
+	.logo > img{
+		width: 150px;
+	}
+	.menu-icon{
+		display: none;
+	}
+	.sliding-menu {
+	  width: 0;
+	  height: 100%;
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  background-color: $opacity-color;
+	  overflow-x: hidden;
+	  transition: 0.15s;
+	  z-index: 1;
+	}
+	.sliding-menu.open {
+	  width: 100%;
+	  padding: 20px;
+	  display: flex;
+	  flex-direction: column;
+	  .cancle{
+	  	cursor: pointer;
+	  }
+	  .hide-menu{
+	  	display: none;
+	  }
+	  .menu-active{
+	  	display: flex;
+	  	flex-direction: column;
+	  	padding: 50px 0px;
+	  	align-items: center;
+	  	*{
+	  		margin: 40px;
+	  		transition: ease 0.2s;
+	  		cursor: pointer;
+
+
+	  		img{
+	  			width: 40px;
+	  		}
+	  	}
+	  	*:hover{
+	  		color: $secondary-color;
+	  	}
+	  	font-size: 1.5rem;
+	  	.shopBag-Bg{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			width: 50px;
+
+			.cartNumber{
+				background-color: $secondary-color;
+				position: absolute;
+				bottom: -10%;
+				left: -3%;
+				width: 15px;
+				height: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 12px;
+				border-radius: 50%;
+				font-size: 0.7em;
+
+			}
+		}
+	  }
+	}
+	.container-div{
+		display: flex;
+		width: 30vw;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.4em;
+		a{
+			transition: ease .5s;
+			cursor: pointer;
+		}
+		a:hover{
+		color: $secondary-color;
+	}
+		img{
+			width: 1.5em;
+		}
+		.shopBag-Bg{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			width: 50px;
+
+
+			.cartNumber{
+				background-color: $secondary-color;
+				position: absolute;
+				bottom: -25%;
+				right: -15%;
+				width: 25px;
+				height: 25px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 15px;
+				border-radius: 50%;
+				font-size: .7em;
+				
+
+			}
+		}
+	}
+
+	@media (max-width: 810px)
+	{
+		justify-content: space-between;
+		padding: 0px 40px;
+		.container-div{
+			display: none;
+		}
+		.menu-icon{
+			display: block;
+		}
+		.logo > img{
+		width: 100px;
+	}
+
+	}
+}
+
